@@ -1,0 +1,11 @@
+﻿/*.navbar-nav .nav-item.active {*/
+/*    !*background-color: #f00; !* Change background color *!*!*/
+/*    color: #fff; !* Change text color *!*/
+/*    border-radius: .25rem; !* Optional: Add some border-radius *!*/
+/*}*/
+
+
+body  {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
