@@ -12,6 +12,9 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//unpkg.com/alpinejs@3" defer></script>
+
+
 
 
     <title>The Coffee Party</title>
@@ -36,11 +39,11 @@
                         <a class="nav-link " href="index.html">Hem</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="om_oss.html">Om Oss</a>
-                    </li>
-                    <li class="nav-item">
 
                         <a class="nav-link active" href="produkter.html">Produkter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="om_oss.html">Om Oss</a>
                     </li>
                 </ul>
             </div>
@@ -50,12 +53,118 @@
 
 <main>
 
-    <div class="container ">
-        
-        
-        
+
+    <div class="container " x-data="{activeTab: 'kaffemaskiner'}">
+
+
+        <div class="my-5">
+            <h2>Produkter & Tjänster</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, dicta dolorum error facere, hic impedit
+                magni minima natus necessitatibus, nihil nostrum quasi vel vero! Amet aspernatur commodi dolores enim
+                provident?</p>
+        </div>
+
+
+        <div class="my-5">
+
+            <nav class="nav nav-pills nav-justified mb-3 ">
+                <a class="nav-link"
+                   x-bind:class="{ 'active': activeTab === 'kaffemaskiner' }"
+                   x-on:click.prevent="activeTab = 'kaffemaskiner'"
+                   href="#"
+                >
+                    Kaffemaskiner
+                </a>
+                <a class="nav-link"
+                   x-bind:class="{ 'active': activeTab === 'kaffeparty' }"
+                   x-on:click.prevent="activeTab = 'kaffeparty'"
+                   href="#"
+                >
+                    Kaffeparty
+                </a>
+
+
+            </nav>
+        </div>
+
+
+        <div x-show="activeTab === 'kaffemaskiner'">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col ">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/200/150?random=1" class="card-img-top" alt="Coffee Machine 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Model A</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid amet aut, commodi debitis ducimus earum, fuga in inventore.</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Pris: 4999 SEK</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/200/150?random=2" class="card-img-top" alt="Coffee Machine 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Model B</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est itaque maxime nisi pariatur vitae. Amet aperiam consectetur.</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Pris: 5999 SEK</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/200/150?random=3" class="card-img-top" alt="Coffee Machine 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Model C</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias assumenda at delectus, distinctio, expedita fugit hic, iure.</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Pris: 6999 SEK</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div x-show="activeTab === 'kaffeparty'">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/200/150?random=4" class="card-img-top" alt="Coffee Machine 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Privatpersoner</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aperiam consectetur consequuntur corporis doloremque, ex facilis illo ipsa ipsum iste laboriosam mollitia nam, nulla officiis porro ratione reprehenderit tempore.</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Pris: 2999 SEK</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/200/150?random=5" class="card-img-top" alt="Coffee Machine 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Företag</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus ad amet, ducimus earum et explicabo ipsam, iusto labore perferendis placeat quia tempore velit. Deleniti eaque illo incidunt placeat suscipit?</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Pris: 3999 SEK</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
+
+
 
 </main>
 
@@ -74,3 +183,36 @@
 
 </body>
 </html>
+
+
+<!--<div class="container my-5">-->
+<!--    &lt;!&ndash; Pill-style nav tabs &ndash;&gt;-->
+<!--    <nav class="nav nav-pills nav-justified mb-3" id="productPills" role="tablist">-->
+<!--        <a class="nav-link active" id="kaffemaskiner-pill" data-bs-toggle="pill" href="#kaffemaskiner" role="tab" aria-controls="kaffemaskiner" aria-selected="true">Kaffemaskiner</a>-->
+<!--        <a class="nav-link" id="kaffeparty-pill" data-bs-toggle="pill" href="#kaffeparty" role="tab" aria-controls="kaffeparty" aria-selected="false">Kaffeparty</a>-->
+<!--    </nav>-->
+
+<!--    &lt;!&ndash; Pill content &ndash;&gt;-->
+<!--    <div class="tab-content" id="pills-tabContent">-->
+<!--        <div class="tab-pane fade show active" id="kaffemaskiner" role="tabpanel" aria-labelledby="kaffemaskiner-pill">-->
+<!--            &lt;!&ndash; Kaffemaskiner content goes here &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                &lt;!&ndash; Use a card layout for coffee machines or any layout that suits your design &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="tab-pane fade" id="kaffeparty" role="tabpanel" aria-labelledby="kaffeparty-pill">-->
+<!--            &lt;!&ndash; Kaffeparty content goes here &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                    <h3>Företag</h3>-->
+<!--                    &lt;!&ndash; Business parties content &ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="col-md-6">-->
+<!--                    <h3>Privatpersoner</h3>-->
+<!--                    &lt;!&ndash; Private parties content &ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
