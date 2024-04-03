@@ -1,11 +1,22 @@
-﻿/*.navbar-nav .nav-item.active {*/
-/*    !*background-color: #f00; !* Change background color *!*!*/
-/*    color: #fff; !* Change text color *!*/
-/*    border-radius: .25rem; !* Optional: Add some border-radius *!*/
-/*}*/
-
-
-body  {
+﻿body {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.nav-pills .nav-link {
+    color: #495057;
+    background-color: #FFFFFF;
+    border: 1px solid #495057;
+}
+
+.nav-pills .nav-link.active {
+    color: #FFFFFF;
+    background-color: #343A40;
+    border-color: #343A40;
+}
+
+.nav-pills .nav-link:not(.active):hover {
+    color: #343A40;
+    background-color: #e9ecef;
+    border-color: #e9ecef;
 }
