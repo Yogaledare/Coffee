@@ -31,8 +31,7 @@ Ni skall skapa en webbsida med tre sidor: “Index”, “Produkter” och “Om
   - Listar kaffemaskiner i ett rutnät
   - Information, modell och pris syns tydligt
 - Kaffeparty 
-
-■  Uppdelad i två delar: Företag och Privatpersoner
+  - Uppdelad i två delar: Företag och Privatpersoner
 
 **Om oss/Kontakt:** 
 
